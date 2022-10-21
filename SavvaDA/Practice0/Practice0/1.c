@@ -19,8 +19,7 @@ int main()
 		printf("Neverno vveden radius");
 		return 1;
 	}
-	s = sqrt(pow((x1 - x2), 2.0) + pow((y1 - y2), 2.0));
-	printf("%f", s);
+	s = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
 	if (s == r1 + r2)
 		printf("Okruzhnosti kasaytsya v 1 tochke");
 	else if (s > r1 + r2)
@@ -35,7 +34,6 @@ int main()
 		else
 			R = r2;
 		r = r1 + r2 - R;
-		printf("%f%f", r, R);
 		if (r + s == R)
 			printf("Vnytrennee kasanie okryzhnostey");
 		else if (r + s > R)
